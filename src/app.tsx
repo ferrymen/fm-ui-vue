@@ -9,8 +9,9 @@ export default Vue.extend ({
   },
   render (h): VNode {
     return (
-      <div>
+      <div id="root">
         {this.msg}
       </div>
     )
+  }
 })

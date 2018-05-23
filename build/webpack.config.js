@@ -14,18 +14,22 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          "babel-loader",
+          {
+            loader: "ts-loader",
+            options: { appendTsxSuffixTo: [/\.vue$/] }
+          }
+        ]
+      },
       // This will apply to both plain `.css` files
       // and `<style>` blocks in `.vue` files
       {
         test: /\.css$/,
         use: ExtractTextWebpackPlugin.extract(['css-loader'])
-      },
-      // This will apply to both plain `.js` files
-      // and `<script>` blocks in `.vue` files
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
       }
     ]
   },
