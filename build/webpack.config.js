@@ -1,6 +1,7 @@
 const { resolve } = require('path')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -15,9 +16,11 @@ module.exports = {
         test: /\.vue$/,
         use: 'vue-loader'
       },
+      // This will apply to both plain `.css` files
+      // and `<style>` blocks in `.vue` files
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ExtractTextWebpackPlugin.extract(['css-loader'])
       }
     ]
   },
@@ -30,6 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './static/index.tpl.html',
       filename: 'index.html',
-    })
+    }),
+    new ExtractTextWebpackPlugin('style.css')
   ]
 }
