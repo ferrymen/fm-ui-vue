@@ -1,21 +1,19 @@
 const { resolve } = require('path')
-const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: './src/main.js',
+  entry: './src/main.ts',
   output: {
     path: resolve(__dirname, '../dist'),
     filename: '[name].bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.ts'] // Must include `.js`, otherwise throw error
+  },
   module: {
     rules: [
-      {
-        test: /\.vue$/,
-        use: 'vue-loader'
-      },
       // This will apply to both plain `.css` files
       // and `<style>` blocks in `.vue` files
       {
@@ -25,8 +23,9 @@ module.exports = {
       // This will apply to both plain `.js` files
       // and `<script>` blocks in `.vue` files
       {
-        test: /\.js$/,
-        loader: 'babel-loader'
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/
       }
     ]
   },
@@ -35,7 +34,7 @@ module.exports = {
     open: true
   },
   plugins: [
-    new VueLoaderPlugin(),
+    // new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: './static/index.tpl.html',
       filename: 'index.html',
