@@ -10,7 +10,7 @@ module.exports = {
     filename: '[name].bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.ts'] // Must include `.js`, otherwise throw error
+    extensions: ['.js', '.ts', '.tsx'] // Must include `.js`, otherwise throw error
   },
   module: {
     rules: [

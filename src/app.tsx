@@ -8,10 +8,9 @@ export default Vue.extend ({
     }
   },
   render (h): VNode {
-    return h('div', {
-      attrs: {
-        id: 'root'
-      }
-    }, this.msg)
-  }
+    return (
+      <div>
+        {this.msg}
+      </div>
+    )
 })
