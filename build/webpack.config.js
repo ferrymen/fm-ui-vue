@@ -21,6 +21,12 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextWebpackPlugin.extract(['css-loader'])
+      },
+      // This will apply to both plain `.js` files
+      // and `<script>` blocks in `.vue` files
+      {
+        test: /\.js$/,
+        loader: 'babel-loader'
       }
     ]
   },
