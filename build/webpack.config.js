@@ -21,7 +21,7 @@ module.exports = {
           "babel-loader",
           {
             loader: "ts-loader",
-            options: { appendTsxSuffixTo: [/\.vue$/] }
+            // options: { appendTsxSuffixTo: [/\.vue$/] }
           }
         ]
       },
