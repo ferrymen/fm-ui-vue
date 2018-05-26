@@ -32,6 +32,7 @@ module.exports = {
   snapshotSerializers: [
     'jest-serializer-vue'
   ],
+  coverageDirectory: "test/unit/__coverages__"
   // collectCoverageFrom: [
   //   'src/**/*.{ts,tsx}',
   //   '!src/index.ts',

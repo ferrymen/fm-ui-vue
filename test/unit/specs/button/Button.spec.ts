@@ -12,5 +12,6 @@ describe('Test TSX Button', () => {
   it('render button', () => {
     const Wrapper = shallowMount(Button)
     expect(Wrapper.contains('div')).toBe(true)
+    expect(Wrapper).toMatchSnapshot();
   })
 })
