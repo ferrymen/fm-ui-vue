@@ -1,7 +1,7 @@
 import Vue, { CreateElement } from 'vue'
 import App from './app'
 
-import '@ferrymen/fm-style/main.scss'
+import './main.scss'
 
 new Vue({
   el: '#root',

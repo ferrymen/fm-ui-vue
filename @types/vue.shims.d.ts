@@ -15,6 +15,7 @@
 //   }
 // }
 
-// declare module '*.scss' {
+// [ts] Cannot find module '@ferrymen/fm-style/06_components/button.scss'.
+declare module '*.scss' {
 
-// }
+}
