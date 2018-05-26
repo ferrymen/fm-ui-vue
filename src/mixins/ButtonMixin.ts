@@ -9,6 +9,6 @@ declare module 'vue/types/vue' {
 @Component
 export default class ButtonMixin extends Vue {
   handleClick (): void {
-    alert('Clicked me!')
+    alert('Clicked me!!!')
   }
 }
