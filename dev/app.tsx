@@ -9,7 +9,7 @@ import { Component } from 'vue-property-decorator'
 // }
 // import Button from './components/button'
 
-import Button from './components/button'
+import { Button } from '../src'
 
 @Component({
   components: {

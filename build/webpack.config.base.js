@@ -1,16 +1,10 @@
-const { resolve } = require('path')
+// const { resolve } = require('path')
 
-const Webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const Webpack = require('webpack')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
-  entry: './src/main.tsx',
-  output: {
-    // path: resolve(__dirname, '../dist'),
-    // filename: '[name].bundle.js'
-  },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'] // Must include `.js`, otherwise throw error
   },
@@ -53,16 +47,12 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    // contentBase: resolve(__dirname, '../dist'),
-    open: true
-  },
   plugins: [
     // new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({
-      template: './static/index.tpl.html',
-      filename: 'index.html',
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './static/index.tpl.html',
+    //   filename: 'index.html',
+    // }),
     // new ExtractTextWebpackPlugin('style.css'),
     // new Webpack.WatchIgnorePlugin([
     //   /scss\.d\.ts$/
