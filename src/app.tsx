@@ -1,13 +1,28 @@
-import Vue, { VNode } from 'vue'
+import Vue, { CreateElement } from 'vue'
 import { Component } from 'vue-property-decorator'
 
-@Component
-export default class App extends Vue{
+// Object literal may only specify known properties, but 'components'
+// does not exist in type 'VueClass<Vue>'. Did you mean to write 'component'?
+// `./components/button`
+// export default {
+//   Button
+// }
+// import Button from './components/button'
+
+import Button from './components/button'
+
+@Component({
+  components: {
+    Button
+  }
+})
+export default class App extends Vue {
   msg = 'Hello World!'
-  render (h: Function): VNode {
+  render (h: CreateElement) {
     return (
       <div id="root">
         {this.msg}
+        <Button />
       </div>
     )
   }

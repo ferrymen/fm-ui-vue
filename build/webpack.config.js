@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: './src/main.ts',
+  entry: './src/main.tsx',
   output: {
     // path: resolve(__dirname, '../dist'),
     // filename: '[name].bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'] // Must include `.js`, otherwise throw error
+    extensions: ['.tsx', '.ts', '.js'] // Must include `.js`, otherwise throw error
   },
   module: {
     rules: [
@@ -29,17 +29,18 @@ module.exports = {
       // and `<style>` blocks in `.vue` files
       {
         test: /\.scss$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
+        loader: 'style-loader!css-loader!sass-loader'
+        // use: [
+        //   {
+        //     loader: 'style-loader'
+        //   },
+        //   {
+        //     loader: 'css-loader'
+        //   },
+        //   {
+        //     loader: 'sass-loader'
+        //   }
+        // ]
       }
     ]
   },
