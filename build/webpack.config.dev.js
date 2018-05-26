@@ -24,15 +24,15 @@ const webpackConfDev = WebpackMerge(webpackConfBase, {
     open: true
   },
   plugins: [
-    // new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: './static/index.tpl.html',
       filename: 'index.html',
     }),
-    // new ExtractTextWebpackPlugin('style.css'),
-    // new Webpack.WatchIgnorePlugin([
-    //   /scss\.d\.ts$/
-    // ])
+    // Webpack rebuilds / builds slow
+    // https://www.npmjs.com/package/typings-for-css-modules-loader
+    new Webpack.WatchIgnorePlugin([
+      /scss\.d\.ts$/
+    ])
   ]
 })
 
