@@ -9,7 +9,7 @@ import { Component } from 'vue-property-decorator'
 // }
 // import Button from './components/button'
 
-import { Button } from '@ferrymen/fm-vue'
+import { Button } from '@ferrymen/fm-ui-vue'
 
 @Component({
   components: {

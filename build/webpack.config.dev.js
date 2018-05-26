@@ -16,7 +16,7 @@ const webpackConfDev = WebpackMerge(webpackConfBase, {
   },
   resolve: {
     alias: {
-      "@ferrymen/fm-vue": "../src"
+      "@ferrymen/fm-ui-vue": "../src"
     }
   },
   devServer: {

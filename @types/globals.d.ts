@@ -15,7 +15,7 @@
 //   }
 // }
 
-// [ts] Cannot find module '@ferrymen/fm-style/06_components/button.scss'.
+// [ts] Cannot find module '@ferrymen/fm-ui-style/06_components/button.scss'.
 declare module '*.scss' {
 
 }
