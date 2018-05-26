@@ -7,12 +7,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const webpackConfBase = require('./webpack.config.base')
 
-module.exports = WebpackMerge(webpackConfBase, {
+const webpackConfDev = WebpackMerge(webpackConfBase, {
   mode: 'development',
   entry: './dev/main.tsx',
   output: {
     // path: resolve(__dirname, '../dist'),
     // filename: '[name].bundle.js'
+  },
+  resolve: {
+    alias: {
+      "@ferrymen/fm-vue": "../src"
+    }
   },
   devServer: {
     // contentBase: resolve(__dirname, '../dist'),
@@ -30,3 +35,6 @@ module.exports = WebpackMerge(webpackConfBase, {
     // ])
   ]
 })
+
+// console.log(webpackConfDev)
+module.exports = webpackConfDev

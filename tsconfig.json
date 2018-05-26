@@ -8,6 +8,9 @@
     "module": "es2015",
     "moduleResolution": "node",
     "jsx": "preserve",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    // This syntax requires an imported helper but module 'tslib' cannot be found
+    // "importHelpers": true,
+    "baseUrl": "./src"
   }
 }
