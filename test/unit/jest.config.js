@@ -18,6 +18,7 @@ module.exports = {
     '@ferrymen/fm-ui-vue': '<rootDir>/src'
   },
   transform: {
+    "\\.(scss)$": "jest-css-modules",
     '^.+\\.tsx?$': 'ts-jest'
   },
   testRegex: "/test/.*\\.(test|spec)\\.(ts|tsx)$"
