@@ -12,5 +12,7 @@
     // This syntax requires an imported helper but module 'tslib' cannot be found
     // "importHelpers": true,
     "baseUrl": "./src"
-  }
+  },
+  // "include": ["src/**/*", "test/**/*"],
+  // "exclude": ["node_modules"]
 }

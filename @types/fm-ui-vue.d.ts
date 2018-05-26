@@ -1,4 +1,4 @@
-// declare module '@ferrymen/fm-vue' {
+// declare module '@ferrymen/fm-ui-vue' {
 //   const _default: any
 //   export default _default
 // }
@@ -8,10 +8,10 @@
 //   export default env
 // }
 
-declare module '@ferrymen/fm-vue' {
+declare module '@ferrymen/fm-ui-vue' {
   export * from 'index'
 }
 
-declare module '@ferrymen/fm-vue/mixins' {
+declare module '@ferrymen/fm-ui-vue/mixins' {
   export * from 'mixins'
 }
