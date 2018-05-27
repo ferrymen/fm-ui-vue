@@ -10,7 +10,7 @@ import { ButtonMixin } from '../../mixins'
 export default class Button extends Vue {
   render(h: CreateElement) {
     return (
-      <div>kkk
+      <div>
         <button
           class={[Style.buttonTextPrimary]}
           onClick={this.handleClick}>

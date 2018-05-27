@@ -8,22 +8,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackConfBase = require('./webpack.config.base')
 
 const webpackConfDev = WebpackMerge(webpackConfBase, {
-  mode: 'development',
+  mode: 'production',
   entry: './dev/main.tsx',
   output: {
-    // path: resolve(__dirname, '../dist'),
-    // filename: '[name].bundle.js'
+    path: resolve(__dirname, '../dist'),
+    filename: '[name].bundle.js'
   },
   resolve: {
     alias: {
       "@ferrymen/fm-ui-vue": "../src"
     }
-  },
-  devServer: {
-    // contentBase: resolve(__dirname, '../dist'),
-    host: 'localhost',
-    port: 8087,
-    open: true
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -35,7 +29,7 @@ const webpackConfDev = WebpackMerge(webpackConfBase, {
     new Webpack.WatchIgnorePlugin([
       /scss\.d\.ts$/
     ])
-  ],
+  ]
 })
 
 // console.log(webpackConfDev)
